@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body>
+    <h3>Q4.WAP in JS to merge two arrays and remove duplicate items.</h3>
+    <script>
+        function merge_array(a1, a2) {
+    var result_array = [];
+    var arr = a1.concat(a2);
+    var len = arr.length;
+    var assoc = {};
+
+    while(len--) {
+        var item = arr[len];
+
+        if(!assoc[item]) 
+        { 
+            result_array.unshift(item);
+            assoc[item] = true;
+        }
+    }
+
+    return result_array;
+}
+
+
+var a1 = [1, 2, 3];
+
+var a2 = [4, 5, 6];
+
+console.log(merge_array(a1, a2));
+    </script>
+</body>
+</html> 
